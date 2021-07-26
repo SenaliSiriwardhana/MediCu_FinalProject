@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C3C5CFD-A5A7-47A6-9934-229382957011}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MediCU_Project</RootNamespace>
+    <AssemblyName>MediCU_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DrugsTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugsTabs.Designer.cs">
+      <DependentUpon>DrugsTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccSettingLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccSettingLab.Designer.cs">
+      <DependentUpon>AccSettingLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccSettingpharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccSettingpharmacy.Designer.cs">
+      <DependentUpon>AccSettingpharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccSettingsPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccSettingsPanel.Designer.cs">
+      <DependentUpon>AccSettingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddDrugs.Designer.cs">
+      <DependentUpon>AddDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add_Drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Drugs.Designer.cs">
+      <DependentUpon>Add_Drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DocAccSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DocAccSettings.Designer.cs">
+      <DependentUpon>DocAccSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoctorRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoctorRegistration.Designer.cs">
+      <DependentUpon>DoctorRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoctorTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoctorTabs.Designer.cs">
+      <DependentUpon>DoctorTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabTabs.Designer.cs">
+      <DependentUpon>LabTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lab_Patient_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lab_Patient_Details.Designer.cs">
+      <DependentUpon>Lab_Patient_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MediCuDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MediCuDoctor.Designer.cs">
+      <DependentUpon>MediCuDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MediCuLaboratory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MediCuLaboratory.Designer.cs">
+      <DependentUpon>MediCuLaboratory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MediCuPharmacyPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MediCuPharmacyPanel.Designer.cs">
+      <DependentUpon>MediCuPharmacyPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MediCuReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MediCuReceptionist.Designer.cs">
+      <DependentUpon>MediCuReceptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewLabR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewLabR.Designer.cs">
+      <DependentUpon>NewLabR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewPhInv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewPhInv.Designer.cs">
+      <DependentUpon>NewPhInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewUpdateLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewUpdateLab.Designer.cs">
+      <DependentUpon>NewUpdateLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewUpdatePharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewUpdatePharmacy.Designer.cs">
+      <DependentUpon>NewUpdatePharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PharmacyTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PharmacyTabs.Designer.cs">
+      <DependentUpon>PharmacyTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pharmacy_Patient_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pharmacy_Patient_Details.Designer.cs">
+      <DependentUpon>Pharmacy_Patient_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RecDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RecDoctor.Designer.cs">
+      <DependentUpon>RecDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RecepAccSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RecepAccSettings.Designer.cs">
+      <DependentUpon>RecepAccSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReceptionistRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReceptionistRegistration.Designer.cs">
+      <DependentUpon>ReceptionistRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReceptionistTabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReceptionistTabs.Designer.cs">
+      <DependentUpon>ReceptionistTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Receptionist_Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Receptionist_Patient.Designer.cs">
+      <DependentUpon>Receptionist_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterAdmin.Designer.cs">
+      <DependentUpon>RegisterAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateDoctors.Designer.cs">
+      <DependentUpon>UpdateDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateReceptionist.Designer.cs">
+      <DependentUpon>UpdateReceptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Update_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Update_Admin.Designer.cs">
+      <DependentUpon>Update_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewAdmin.Designer.cs">
+      <DependentUpon>ViewAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewDoctors.Designer.cs">
+      <DependentUpon>ViewDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewLab.Designer.cs">
+      <DependentUpon>ViewLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewPharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewPharmacy.Designer.cs">
+      <DependentUpon>ViewPharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewReceptionist.Designer.cs">
+      <DependentUpon>ViewReceptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\View_Drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\View_Drugs.Designer.cs">
+      <DependentUpon>View_Drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vlab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vlab.Designer.cs">
+      <DependentUpon>vlab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vpha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vpha.Designer.cs">
+      <DependentUpon>Vpha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DrugsTabs.resx">
+      <DependentUpon>DrugsTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccSettingLab.resx">
+      <DependentUpon>AccSettingLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccSettingpharmacy.resx">
+      <DependentUpon>AccSettingpharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccSettingsPanel.resx">
+      <DependentUpon>AccSettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddDrugs.resx">
+      <DependentUpon>AddDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_Drugs.resx">
+      <DependentUpon>Add_Drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DocAccSettings.resx">
+      <DependentUpon>DocAccSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoctorRegistration.resx">
+      <DependentUpon>DoctorRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoctorTabs.resx">
+      <DependentUpon>DoctorTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabTabs.resx">
+      <DependentUpon>LabTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lab_Patient_Details.resx">
+      <DependentUpon>Lab_Patient_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediCuDoctor.resx">
+      <DependentUpon>MediCuDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediCuLaboratory.resx">
+      <DependentUpon>MediCuLaboratory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediCuPharmacyPanel.resx">
+      <DependentUpon>MediCuPharmacyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediCuReceptionist.resx">
+      <DependentUpon>MediCuReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewLabR.resx">
+      <DependentUpon>NewLabR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewPhInv.resx">
+      <DependentUpon>NewPhInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewUpdateLab.resx">
+      <DependentUpon>NewUpdateLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewUpdatePharmacy.resx">
+      <DependentUpon>NewUpdatePharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PharmacyTabs.resx">
+      <DependentUpon>PharmacyTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pharmacy_Patient_Details.resx">
+      <DependentUpon>Pharmacy_Patient_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RecDoctor.resx">
+      <DependentUpon>RecDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RecepAccSettings.resx">
+      <DependentUpon>RecepAccSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReceptionistRegistration.resx">
+      <DependentUpon>ReceptionistRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReceptionistTabs.resx">
+      <DependentUpon>ReceptionistTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Receptionist_Patient.resx">
+      <DependentUpon>Receptionist_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterAdmin.resx">
+      <DependentUpon>RegisterAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateDoctors.resx">
+      <DependentUpon>UpdateDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateReceptionist.resx">
+      <DependentUpon>UpdateReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Update_Admin.resx">
+      <DependentUpon>Update_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewAdmin.resx">
+      <DependentUpon>ViewAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewDoctors.resx">
+      <DependentUpon>ViewDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewLab.resx">
+      <DependentUpon>ViewLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewPharmacy.resx">
+      <DependentUpon>ViewPharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewReceptionist.resx">
+      <DependentUpon>ViewReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\View_Drugs.resx">
+      <DependentUpon>View_Drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vlab.resx">
+      <DependentUpon>vlab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vpha.resx">
+      <DependentUpon>Vpha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medicine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eHealth-telemedicine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set7.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctor.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doc2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phar2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lab2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recep2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin3.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADMIN4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounts.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccSettings.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccSet.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdminLogo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 1.00.50 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 1.10.45 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 12.29.19 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 1.08.40 PM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lab.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 1.08.40 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 5.36.57 PM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 5.36.58 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 5.36.57 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 5.47.45 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 5.55.03 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account%283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %284%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %283%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %285%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pharmacy.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-24 at 1.45.45 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-24 at 1.45.45 AM1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %281%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %284%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %283%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %282%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %285%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin21.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opioids-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-24 at 1.45.45 AM2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 5.55.03 PM1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 1.08.40 PM1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-10 at 1.08.40 PM2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-24 at 12.26.20 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-24 at 12.42.56 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2021-02-11 at 12.31.18 AM %281%292.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
